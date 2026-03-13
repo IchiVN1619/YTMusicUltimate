@@ -21,5 +21,6 @@ $(TWEAK_NAME)_LIBRARIES = bz2 c++ iconv z
 ifeq ($(SIDELOADING),1)
 $(TWEAK_NAME)_FILES += Sideloading.xm
 endif
-
+ADDITIONAL_CFLAGS += -Wno-vla-cxx-extension
+ADDITIONAL_OBJCFLAGS += -Wno-vla-cxx-extension
 include $(THEOS_MAKE_PATH)/tweak.mk
